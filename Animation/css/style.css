@@ -1,0 +1,90 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+:root {
+ --shadow-color: rgba(0, 0, 0, 0.2);
+ --night-bg-color: rgb(5, 5, 77);
+ --air-bg-color: #7dbefb;
+}
+
+.flex_c {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.container {
+ display: flex;
+ width: 100%;
+ height: 100vh;
+ background-color: var(--air-bg-color);
+ border: 1rem solid green;
+ animation: change 10s infinite;
+ position: relative;
+}
+
+@keyframes change {
+ 0% {
+  background-color: var(--night-bg-color);
+ }
+ 25%,
+ 50%,
+ 75% {
+  background-color: var(--night-bg-color);
+ }
+ 100%,
+ 125% {
+  /* background-color: #91c9fd; */
+  background-color: var(--air-bg-color);
+ }
+}
+
+.sun {
+ width: 6rem;
+ height: 5rem;
+ border-radius: 50%;
+ background-color: #fbff02;
+ position: absolute;
+ right: 2rem;
+ top: 1rem;
+ animation: surusmek 10s infinite;
+}
+
+@keyframes surusmek {
+ 0%,
+ 125% {
+  top: 1rem;
+  right: 2rem;
+ }
+ 25% {
+  top: 4rem;
+  right: 4rem;
+ }
+ 50% {
+  top: 8rem;
+  right: 8rem;
+ }
+ 75% {
+  top: 16rem;
+  right: 6rem;
+ }
+ 100% {
+  bottom: 20rem;
+  right: 4rem;
+  z-index: -100px;
+  display: none;
+ }
+}
+
+/* ground  */
+
+.ground {
+ align-self: flex-end;
+ width: 100%;
+ height: 12rem;
+ background-color: #ad343e;
+ border: 0.2rem solid black;
+}

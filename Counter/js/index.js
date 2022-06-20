@@ -1,24 +1,36 @@
-function showTime() {
- const time = new Date();
- const timeNow =
-  time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
- const h3 = document.getElementById('time');
- h3.innerText = timeNow;
-}
+const number = document.getElementById('number');
+const btns = document.querySelectorAll('button');
+const counter = document.querySelector('#counter');
 
-setInterval(showTime, 1000);
+let count = 0;
 
-setInterval(moveCar, 1);
-const carBox = document.getElementById('car__box');
+console.log(btns);
 
-var x = 0;
-function moveCar() {
- x++;
+btns.forEach((item) => {
+ item.addEventListener('click', (e) => {
+  let styles = e.currentTarget.classList;
 
- if (x > 0 && x < 1000) {
-  carBox.style.marginLeft = x + 'px';
-  document.getElementById('text').innerText = x + 'px';
- } else {
-  clearInterval(timer);
- }
-}
+  if (styles.contains('decrease')) {
+   count--;
+  } else if (styles.contains('reset')) {
+   count = 0;
+  } else if (styles.contains('increase')) {
+   count++;
+  }
+
+  number.textContent = count;
+
+  if (count < 0) {
+   number.style.color = 'red';
+   counter.style.color = 'red';
+  }
+  if (count > 0) {
+   number.style.color = 'green';
+   counter.style.color = 'green';
+  }
+  if (count === 0) {
+   number.style.color = 'black';
+   counter.style.color = 'black';
+  }
+ });
+});

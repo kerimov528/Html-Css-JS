@@ -1,0 +1,102 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.d-flex {
+ display: flex;
+ align-items: center;
+}
+
+a {
+ text-decoration: none;
+}
+
+body {
+ background-color: #f2f2f2;
+ font-family: sans-serif;
+ animation: changeColor 13s 1s infinite;
+}
+
+nav {
+ height: 5rem;
+ padding: 1rem 5rem;
+ justify-content: flex-end;
+}
+
+nav button {
+ border: none;
+ background-color: transparent;
+}
+nav button span {
+ font-size: 3rem !important;
+ cursor: pointer;
+}
+@keyframes changeColor {
+ 0% {
+  background-color: aqua;
+ }
+ 25% {
+  background-color: yellow;
+ }
+ 50% {
+  background-color: tomato;
+ }
+ 75% {
+  background-color: blueviolet;
+ }
+ 100% {
+  background-color: aqua;
+ }
+}
+
+aside.sidebar {
+ width: 23rem;
+ height: calc(100vh);
+ background-color: #fff;
+ padding: 2rem 3rem;
+ position: absolute;
+ top: 0;
+}
+.hide__sidebar {
+ left: -100rem;
+}
+
+.sidebar__top {
+ justify-content: space-between;
+}
+.sidebar__top h1 {
+ font-size: 1.4rem;
+ letter-spacing: 1px;
+}
+.sidebar__top span {
+ font-size: 1.8rem !important;
+ color: tomato;
+ cursor: pointer;
+}
+.sidebar__middle {
+ margin-top: 2rem;
+ padding: 2rem 0;
+}
+.sidebar__middle ul {
+ list-style: none;
+}
+.sidebar__middle ul li {
+ text-decoration: none;
+ font-size: 1.3rem;
+ margin-bottom: 2rem;
+}
+.sidebar__middle ul li a:hover {
+ color: red;
+}
+.bottom {
+ margin-top: 6rem;
+ height: 4rem;
+ text-align: center;
+}
+.bottom span {
+ font-size: 2rem;
+ margin-left: 1rem;
+ cursor: pointer;
+}

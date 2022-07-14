@@ -1,0 +1,6 @@
+@import url("_variable");
+
+* {
+    @include reset;
+    background-color: $pink;
+}

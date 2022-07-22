@@ -1,0 +1,24 @@
+$pink: #6b59d3;
+$grey: #bfc0c0;
+$primary: #6b59d3;
+$text-clr: #5b6475;
+$header-clr: #25273d;
+$next-btn-hover: #8577d2;
+$back-btn-hover: #8b8c8c;
+$main-font: 'Open Sans',
+sans-serif;
+
+
+@mixin reset {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@mixin h2Font {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-bottom: 1.3rem;
+}

@@ -12,15 +12,15 @@
     width: 80%;
     .light__box {
         width: 100%;
-        height: 100vh;
+        height: 900px;
         background-color: rgba($color: $black, $alpha: 75%);
         display: none;
         .sidebar {
             width:20rem;
-            height: 100vh;
+            height: 900px;
             background-color: #fff;
             z-index: 2;
-            .navbar-nav a:hover {
+            .sidebar__navbar a:hover {
                 color: $vark_blue !important;
                 font-weight: 700;
             }
@@ -55,7 +55,7 @@
                 display: none;
             }
             .product__box {
-                display: block;
+                display: none;
                 img {
                     width: 3rem;
                     height: 3rem;
@@ -69,8 +69,8 @@
 }
 
 .main__section {
-    .container {
-        width: 90%;
+    .container-sm {
+        width: 100%;
         .col-12 img {
             width: 40rem;
             height: 25rem;
@@ -130,11 +130,27 @@
     }
 }
 
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 576px) {
     html {
         font-size: 10px;
     }
-    .container {
+    .container, main.section .container-sm {
         width: 100%;
     }
+    .main__section {
+        .container-fluid {
+            .col-12 img {
+                width: 100%;
+                z-index: -1;
+            }
+            .col {
+                display: none
+            }    
+        }
+        .right__side {
+            max-width: 80%;
+            margin: auto;
+        }
+    }
+    
 }

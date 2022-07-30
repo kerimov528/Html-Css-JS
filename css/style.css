@@ -14,17 +14,17 @@
 }
 .container .light__box {
   width: 100%;
-  height: 100vh;
+  height: 900px;
   background-color: rgba(0, 0, 0, 0.75);
   display: none;
 }
 .container .light__box .sidebar {
   width: 20rem;
-  height: 100vh;
+  height: 900px;
   background-color: #fff;
   z-index: 2;
 }
-.container .light__box .sidebar .navbar-nav a:hover {
+.container .light__box .sidebar .sidebar__navbar a:hover {
   color: hsl(220deg, 13%, 13%) !important;
   font-weight: 700;
 }
@@ -57,7 +57,7 @@
   display: none;
 }
 .container .boxs__info .main .product__box {
-  display: block;
+  display: none;
 }
 .container .boxs__info .main .product__box img {
   width: 3rem;
@@ -67,19 +67,19 @@
   background-color: hsl(26deg, 100%, 55%);
 }
 
-.main__section .container {
-  width: 90%;
+.main__section .container-sm {
+  width: 100%;
 }
-.main__section .container .col-12 img {
+.main__section .container-sm .col-12 img {
   width: 40rem;
   height: 25rem;
   border-radius: 1rem;
 }
-.main__section .container img {
+.main__section .container-sm img {
   border-radius: 0.7rem;
   cursor: pointer;
 }
-.main__section .container img:not(.container .col-12 img):hover {
+.main__section .container-sm img:not(.container .col-12 img):hover {
   opacity: 0.3;
 }
 .main__section .right__side {
@@ -122,11 +122,22 @@
     font-size: 12px;
   }
 }
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 576px) {
   html {
     font-size: 10px;
   }
-  .container {
+  .container, main.section .container-sm {
     width: 100%;
+  }
+  .main__section .container-fluid .col-12 img {
+    width: 100%;
+    z-index: -1;
+  }
+  .main__section .container-fluid .col {
+    display: none;
+  }
+  .main__section .right__side {
+    max-width: 80%;
+    margin: auto;
   }
 }

@@ -21,10 +21,10 @@
 <body>
     <!-- nav  -->
     <div class="container">
-        <div class="light__box position-absolute top-0 start-0 end-0 bottom-0">
-            <div class="sidebar position-absolute top-0 start-0 p-4" id="sidebar">
-                <button class="btn btn-close" aria-label="close" type="button"></button>
-                <div class="navbar-nav mt-3">
+        <div class="light__box position-absolute top-0 start-0 end-0 bottom-0" id="lightBox">
+            <div class="sidebar position-absolute top-0 end-0 p-4" id="sidebar">
+                <button class="btn btn-close" aria-label="close" type="button" id="closeBtn"></button>
+                <div class="sidebar__navbar mt-3">
                     <a class="nav-link text-muted lh-base" href="#">Collections</a>
                     <a class="nav-link text-muted lh-base" href="#">Men</a>
                     <a class="nav-link text-muted active" aria-current="page" href="#">Women</a>
@@ -69,15 +69,15 @@
                         <img src="./img/image-avatar.png" alt="" class="img-fluid" />
                     </div>
                 </div>
-                <div class="boxs__info position-absolute rounded-3">
+                <div class="boxs__info  position-absolute rounded-3" id="boxsInfo">
                     <header class="border-2 border-bottom">
                         <h5 class="p-3">Cart</h5>
                     </header>
                     <div class="main w-100 h-75">
-                        <div class="empty__box h-100 align-items-center justify-content-center">
+                        <div class="empty__box h-100 align-items-center justify-content-center" id="emptyBox">
                             Your cart is empty.
                         </div>
-                        <div class="product__box">
+                        <div class="product__box" id="productBox">
                             <div class="container-fluid">
                                 <div class="row row-cols-1">
                                     <div class="col">
@@ -91,19 +91,19 @@
                                                     <p class="text-capitalize mb-0 fs-6 text-muted">
                                                         Fall limited edition snearkers
                                                     </p>
-                                                    <p class="mb-0 text-muted">
-                                                        $125 x 3 <strong>$325</strong>
+                                                    <p class="mb-0 text-muted" id="payInfo">
                                                     </p>
                                                 </div>
                                                 <div class="col-1 px-0">
-                                                    <button class="btn bg-transparent d-flex align-items-center p-0">
+                                                    <button class="btn bg-transparent d-flex align-items-center p-0" id="deleteProduct">
                                                         <span class="material-symbols-outlined">
                                                             delete
                                                         </span>
                                                     </button>
                                                 </div>
                                                 <div class="col-12">
-                                                    <button class="btn w-100 text-white py-2 mt-3 rounded-3">
+                                                    <button class="btn w-100 text-white py-2 mt-3 rounded-3"
+                                                    id="checkout">
                                                         Checkout
                                                     </button>
                                                 </div>
@@ -120,12 +120,13 @@
     </div>
 
     <!-- main section -->
-    <div class="main__section container mt-3 p-5">
-        <div class="row row-cols-1 row-cols-lg-2">
-            <div class="col">
-                <div class="container px-4">
+    <div class="main__section container  mt-sm-3 p-sm-5">
+        <div class="light__box  d-none position-absolute top-0 start-0 end-0 bottom-0 align-items-center justify-content-center">
+            <div class="col-6 m-auto p-0">
+                <div class="container-fluid container-sm m-0 p-0 px-sm-4">
                     <div class="row">
-                        <div class="col-12 mb-4">
+                        <div class="col-12 m-0 p-0 mb-sm-4">
+                            <button class="btn btn-close btn-close-white mb-4 float-end me-3 fs-3" aria-label="close" type="button" id="closeBtn"></button>
                             <img src="./img/image-product-1.jpg" alt="" class="img-fluid " />
                         </div>
                         <div class="col">
@@ -143,7 +144,30 @@
                     </div>
                 </div>
             </div>
-            <div class="right__side col p-4">
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col m-0 p-0">
+                <div class="container-fluid container-sm m-0 p-0 px-sm-4">
+                    <div class="row">
+                        <div class="col-12 m-0 p-0 mb-sm-4">
+                            <img src="./img/image-product-1.jpg" alt="" class="img-fluid " />
+                        </div>
+                        <div class="col">
+                            <img src="./img/image-product-1-thumbnail.jpg" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col">
+                            <img src="./img/image-product-2-thumbnail.jpg" alt="" class="img-fluid" />
+                        </div>
+                        <div class="col">
+                            <img src="./img/image-product-3-thumbnail.jpg" alt="" class="img-fluid " />
+                        </div>
+                        <div class="col">
+                            <img src="./img/image-product-4-thumbnail.jpg" alt="" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right__side col p-0 p-md-5">
                 <h6 class="text-uppercase mb-3">sneaker company</h6>
                 <h3 class="text-capitalize text-wrap display-6 fw-bold mb-4">Fall limited edition snearkers</h3>
                 <p class="text-muted lh-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde maiores
@@ -166,7 +190,7 @@
                                 <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
                             </svg>
                         </button>
-                        <p class="mb-0">0</p>
+                        <p class="mb-0" id="productCount">0</p>
                         <button class="btn" id="plus">
                             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -190,8 +214,6 @@
                         <p class="ms-3 mb-0">Add to cart</p>
                     </button>
                 </div>
-
-
             </div>
         </div>
     </div>

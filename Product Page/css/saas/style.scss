@@ -1,0 +1,140 @@
+@use "./variable" as *;
+
+* {
+    @include reset;
+    &:focus {
+        box-shadow:none !important;
+    }
+    font-family: $main_font;
+}
+
+.container {
+    width: 80%;
+    .light__box {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($color: $black, $alpha: 75%);
+        display: none;
+        .sidebar {
+            width:20rem;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 2;
+            .navbar-nav a:hover {
+                color: $vark_blue !important;
+                font-weight: 700;
+            }
+        }
+    }
+    .collapse .navbar-nav {
+        height: 6.3rem;
+        a {
+            height: 100%;
+            padding-top: 2.4rem;
+            margin-right: 1rem;  
+            &:hover, &.active{
+                border-bottom: 5px solid $orange;
+                color: $vark_blue !important;
+            }
+        }
+    }
+    .img__box {
+        width: 3rem;
+        height: 3rem;
+    }
+    .boxs__info {
+        display: none;
+        width: 22rem;
+        height: 14rem;
+        background-color: $white;
+        top: 5rem;
+        right: -3.5rem;
+        box-shadow: -2px 0px 10px rgba($color: #000000, $alpha: 25%);
+        .main {
+            .empty__box {
+                display: none;
+            }
+            .product__box {
+                display: block;
+                img {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                .col-12 button {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+}
+
+.main__section {
+    .container {
+        width: 90%;
+        .col-12 img {
+            width: 40rem;
+            height: 25rem;
+            border-radius: 1rem;
+        }
+        img {
+            border-radius: .7rem;
+            cursor: pointer;
+            &:not(.container .col-12 img):hover {
+                opacity: 0.3;
+            }
+        }    
+    }
+    .right__side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h6 {
+            font-size: .9rem;
+            color: $orange;
+            font-weight: bold;
+        }
+        .cost {
+            span {
+                background-color: $pale_orange;
+                color: $orange;
+                margin-bottom: 10px;
+            }
+        }
+        div.footer div{
+            width: 8rem;
+            background-color: $light_grayish_blue;
+        }
+        #addToCart {
+            background-color: $orange;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+    nav.navbar{
+        min-height: 7.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    html {
+        font-size: 10px;
+    }
+    .container {
+        width: 100%;
+    }
+}

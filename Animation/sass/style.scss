@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: #AF42AE; */
+    /* background: rgb(160, 0, 0); */
+}
+
+/* Navbar  */
+
+.navbar-brand  {
+    i{
+   animation: circle 2.5s  infinite;
+    }
+    h3 {
+        font-size: 1.525rem;
+    }
+
+    @keyframes circle {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+/* Main Content  */
+
+/* 3d Flip Btn  */
+
+.Box {
+    min-height: 20rem;
+    box-shadow: 20px 20px 10px #1111;
+}
+
+div#flipBtn3dBox {
+    perspective: 800px;
+    button.flipBtn3d {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        transform-style: preserve-3d;
+        transition: transform 300ms ease-in-out;
+        transform: translateZ(-75px);
+        &:hover {
+            transform: rotateX(-90deg)
+            translateY(75px);
+        }
+        .side {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            font-size: 3rem;
+            backface-visibility: hidden;
+        }
+        .default-side {
+            background-color: white;
+            border: 10px solid #069;
+            color: #069;
+            transform: translateZ(75px);
+        }
+        .hover-side {
+            color: white;
+            background-color: #069;
+            transform: rotateX(90deg) translateZ(75px);
+        }
+    }
+}

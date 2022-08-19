@@ -14,9 +14,15 @@
     />
 
     <!-- Font Awasome icons  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css" />
 
     <title>Hello, world!</title>
   </head>
@@ -26,52 +32,62 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container">
         <div class="navbar-brand d-flex align-items-center mx-auto">
-            <i class="fa-solid fa-gear text-danger"></i>
-            <h3 class="text-danger fw-bold my-0 ms-3">Animation Site</h3>
+          <i class="fa-solid fa-gear text-danger"></i>
+          <h3 class="text-danger fw-bold my-0 ms-3">Animation Site</h3>
         </div>
       </div>
     </nav>
 
     <!-- Main Content  -->
 
-    <div class="container-fluid py-3 px-5 bg-warning">
-        <div class="row" id="sections-row">
-            <div class="col-sm-6 col-lg-4 p-3">
-
-              <!-- Flip Btn 3d Box  -->
-                <div class="col Box d-flex align-items-center justify-content-center rounded-3  bg-white p-3 text-white" id="flipBtn3dBox">
-                  <button class="btn d-flex align-items-center justify-content-center flipBtn3d position-relative">
-                    <div class="side d-flex  bg-white align-items-center justify-content-center position-absolute top-0 start-0 default-side text-dark">Hower Me</div>
-                    <div class="side d-flex align-items-center justify-content-center position-absolute top-0 start-0 hover-side fw-bold text-white">Surprise</div>
-                  </button>
-                </div>
-
-
-            </div>
-            <div class="col-sm-6 col-lg-4 p-3">
-
-
-                <div class="col Box d-flex align-items-center justify-content-center bg-dark rounded-3 p-3 text-white">
-                </div>
-
-
-            </div><div class="col-sm-6 col-lg-4 p-3">
-
-
-                <div class="col Box d-flex align-items-center justify-content-center bg-dark rounded-3 p-3 text-white">
-                </div>
-
-
-            </div><div class="col-sm-6 col-lg-4 p-3">
-
-
-                <div class="col Box d-flex align-items-center justify-content-center bg-dark rounded-3 p-3 text-white">
-                </div>
-
-                
-            </div>
-
+    <div class="container-fluid py-3 px-5">
+      <div class="row" id="sections-row">
+        <div class="col-sm-6 col-lg-4 p-3">
+          <!-- Flip Btn 3d Box  -->
+          <div
+            class="col Box d-flex align-items-center justify-content-center rounded-3 bg-white p-3 text-white"
+            id="flipBtn3dBox"
+          >
+            <button
+              class="btn d-flex align-items-center justify-content-center flipBtn3d position-relative"
+            >
+              <div
+                class="side d-flex bg-white align-items-center justify-content-center position-absolute top-0 start-0 default-side text-dark"
+              >
+                Hower Me
+              </div>
+              <div
+                class="side d-flex align-items-center justify-content-center position-absolute top-0 start-0 hover-side fw-bold text-white"
+              >
+                Surprise
+              </div>
+            </button>
+          </div>
         </div>
+        <div class="col-sm-6 col-lg-4 p-3">
+          <!-- Spinner Animation -->
+          <div
+            class="col Box d-flex align-items-center justify-content-center bg-white rounded-3 p-3 text-white" id="spinnerBox"
+          >
+          <div class="spinner d-flex align-items-center justify-content-center position-relative">
+            <div class="spinner-text text-black">Loading</div>
+            <div class="spinner-sector spinner-sector-red position-absolute w-100 h-100"></div>
+            <div class="spinner-sector spinner-sector-blue position-absolute w-100 h-100"></div>
+            <div class="spinner-sector spinner-sector-green position-absolute w-100 h-100"></div>
+          </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 p-3">
+          <div
+            class="col Box d-flex align-items-center justify-content-center bg-dark rounded-3 p-3 text-white"
+          ></div>
+        </div>
+        <div class="col-sm-6 col-lg-4 p-3">
+          <div
+            class="col Box d-flex align-items-center justify-content-center bg-dark rounded-3 p-3 text-white"
+          ></div>
+        </div>
+      </div>
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -5,8 +5,8 @@
 }
 
 body {
-    /* background: #AF42AE; */
-    /* background: rgb(160, 0, 0); */
+    // background: #AF42AE;
+    background: rgb(160, 0, 0);
 }
 
 /* Navbar  */
@@ -31,22 +31,21 @@ body {
 /* 3d Flip Btn  */
 
 .Box {
-    min-height: 20rem;
-    box-shadow: 20px 20px 10px #1111;
+    min-height: 25rem;
 }
 
 div#flipBtn3dBox {
-    perspective: 800px;
+    perspective: 50rem;
     button.flipBtn3d {
         position: relative;
-        width: 300px;
-        height: 150px;
+        width: 18.74rem;
+        height: calc(18.74rem * .5);
         transform-style: preserve-3d;
         transition: transform 300ms ease-in-out;
-        transform: translateZ(-75px);
+        transform: translateZ(-calc(calc(18.74rem * .5) * .5));
         &:hover {
             transform: rotateX(-90deg)
-            translateY(75px);
+            translateY(calc(calc(18.74rem * .5) * .5));
         }
         .side {
             width: 100%;
@@ -59,12 +58,87 @@ div#flipBtn3dBox {
             background-color: white;
             border: 10px solid #069;
             color: #069;
-            transform: translateZ(75px);
+            transform: translateZ(calc(calc(18.74rem * .5) * .5));
         }
         .hover-side {
             color: white;
             background-color: #069;
-            transform: rotateX(90deg) translateZ(75px);
+            transform: rotateX(90deg) translateZ(calc(calc(18.74rem * .5) * .5));
         }
+    }
+}
+
+div#spinnerBox {
+    div.spinner {
+        width: 18.75rem;
+        height: 18.75rem;
+        .spinner-sector {
+            border-radius: 50%;
+            border: 1rem solid transparent;
+        }
+        
+        .spinner-text {
+            animation: loading-opacity 3s ease-in-out infinite;
+            font-size: 2em;
+        }
+        
+        .spinner-sector-blue {
+            animation: rotate 2s ease-out infinite;
+            border-top: 1rem solid tomato;
+        }
+        
+        .spinner-sector-red {
+            animation: rotate 2.5s ease-in infinite;
+            border-top: 1rem solid blue;
+        }
+        
+        .spinner-sector-green {
+            animation: rotate 1.5s ease-in-out infinite;
+            border-top: 1rem solid green;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes loading-opacity {
+            0%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: .5;
+            }
+            50% {
+                opacity: .1;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 992px ){
+    html {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 768px ){
+    html {
+        font-size: 13px;
+    }
+
+    div.spinner {
+        width: 16.75rem;
+        height: 16.75rem;
+    }
+}
+
+
+@media screen and (max-width: 576px ){
+    html {
+        font-size: 11px;
     }
 }

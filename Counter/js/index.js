@@ -7,30 +7,30 @@ let count = 0;
 console.log(btns);
 
 btns.forEach((item) => {
- item.addEventListener('click', (e) => {
-  let styles = e.currentTarget.classList;
+    item.addEventListener('click', (e) => {
+        let styles = e.currentTarget.classList;
 
-  if (styles.contains('decrease')) {
-   count--;
-  } else if (styles.contains('reset')) {
-   count = 0;
-  } else if (styles.contains('increase')) {
-   count++;
-  }
+        if (styles.contains('decrease')) {
+            count--;
+        } else if (styles.contains('reset')) {
+            count = 0;
+        } else if (styles.contains('increase')) {
+            count++;
+        }
 
-  number.textContent = count;
+        number.textContent = count;
 
-  if (count < 0) {
-   number.style.color = 'red';
-   counter.style.color = 'red';
-  }
-  if (count > 0) {
-   number.style.color = 'green';
-   counter.style.color = 'green';
-  }
-  if (count === 0) {
-   number.style.color = 'black';
-   counter.style.color = 'black';
-  }
- });
+        if (count < 0) {
+            number.style.color = 'red';
+            counter.style.color = 'red';
+        }
+        if (count > 0) {
+            number.style.color = 'green';
+            counter.style.color = 'green';
+        }
+        if (count === 0) {
+            number.style.color = 'black';
+            counter.style.color = 'black';
+        }
+    });
 });

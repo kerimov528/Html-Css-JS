@@ -12,34 +12,43 @@ body {
 
 .section-1.container {
     width: 50%;
+
     .firstCol {
         width: 60% !important;
         padding: 1rem 2rem 4rem;
         background-color: #fff;
         margin-top: 7rem;
+
         h3 {
             letter-spacing: 4px;
             font-weight: bold;
             margin-bottom: 4rem;
         }
+
         #main {
             display: flex;
         }
+
         .info_about_win {
-            h1#win,h1#lose {
+
+            h1#win,
+            h1#lose {
                 display: none;
                 color: green;
                 font-weight: bold;
                 letter-spacing: 4px;
                 animation: color 3s;
             }
+
             h1#lose {
                 color: tomato;
             }
         }
+
         .col {
             padding: 1rem;
         }
+
         .info {
             display: none;
         }
@@ -51,40 +60,45 @@ body {
     0% {
         opacity: 0.2;
     }
+
     25% {
         opacity: 0.4;
     }
+
     50% {
         opacity: 0.6;
     }
+
     75% {
         opacity: 0.8;
     }
+
     100% {
         opacity: 1;
-    }   
+    }
 }
 
-@media  screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     html {
         font-size: 13.5px;
     }
 }
 
-@media  screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 12px;
     }
+
     .section-1.container {
         .firstCol {
             #main {
-        display: block;
+                display: block;
+            }
+        }
     }
-  }
-}
 }
 
-@media  screen and (max-width: 512px) {
+@media screen and (max-width: 512px) {
     html {
         font-size: 10px;
     }

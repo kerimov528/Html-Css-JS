@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: tomato;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.container form {
+  display: flex;
+  align-items: flex-end;
+}
+.container textarea,
+.container textarea::placeholder {
+  font-size: 2rem;
+  resize: none;
+}
+.container button {
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  margin-left: 1rem;
+}
+
+.result {
+    margin-top: 2rem;
+}
+
+.result .animationText {
+  font-size: 4rem;
+}
